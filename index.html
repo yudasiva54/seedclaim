@@ -34,6 +34,7 @@
       color: black;
       background: url('/png/seed.GIF') no-repeat center center/cover;
     }
+
     .background {
       position: relative;
       width: 100%;
@@ -65,6 +66,7 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      text-decoration: none;
       transition: background-color 0.3s, color 0.3s, transform 0.2s;
     }
 
@@ -118,7 +120,7 @@
   <!-- Main Content -->
   <div class="background">
     <div class="counter" id="counter">0</div>
-    <a href="#" class="claim-button" id="startAnimation">Claim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15.000,34</a>
+    <button class="claim-button" id="startAnimation">Claim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15.000,34</button>
   </div>
 
   <script>
@@ -148,8 +150,7 @@
     }
 
     // Tambahkan event listener pada tombol
-    startAnimationButton.addEventListener('click', (e) => {
-      e.preventDefault(); // Hindari reload halaman
+    startAnimationButton.addEventListener('click', () => {
       setTimeout(() => {
         animateCount(0, 15000.34, 2000); // Durasi 2 detik
       }, 5000); // Mulai setelah 5 detik
