@@ -118,12 +118,13 @@
   <!-- Main Content -->
   <div class="background">
     <div class="counter" id="counter">0</div>
-    <button class="claim-button">Claim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15.000,34</button>
+    <a href="#" class="claim-button" id="startAnimation">Claim&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15.000,34</a>
   </div>
 
   <script>
     // Elemen counter
     const counterElement = document.getElementById('counter');
+    const startAnimationButton = document.getElementById('startAnimation');
 
     // Fungsi untuk animasi hitungan
     function animateCount(start, end, duration) {
@@ -146,8 +147,13 @@
       const interval = setInterval(updateCounter, 1000 / fps);
     }
 
-    // Mulai animasi
-    animateCount(0, 15000.34, 2000); // Durasi 2 detik
+    // Tambahkan event listener pada tombol
+    startAnimationButton.addEventListener('click', (e) => {
+      e.preventDefault(); // Hindari reload halaman
+      setTimeout(() => {
+        animateCount(0, 15000.34, 2000); // Durasi 2 detik
+      }, 5000); // Mulai setelah 5 detik
+    });
   </script>
 </body>
 </html>
