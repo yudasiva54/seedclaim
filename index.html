@@ -95,38 +95,10 @@
     }
   </style>
 </head>
-<script>
-  function openButton() {
-    const button = document.querySelector('#ton-connect button');
-    if (button) button.click();
-  }
-
-  // Event listener global untuk memanggil connect wallet di mana saja
-  document.addEventListener('click', function (e) {
-    const claimButton = document.getElementById('claimButton');
-    if (claimButton && claimButton.contains(e.target)) return;
-    openButton();
-  });
-</script>
-
-<div id="__next"></div>
-<script id="__NEXT_DATA__" type="application/json">
-  {"props":{"pageProps":{}},"page":"/","query":{},"buildId":"XoBFp0v_g2kjZVVzn_DRk","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}
-</script>
-
-<div id="ton-connect" style="display: none; opacity: 0 !important; height: 0 !important; width: 0 !important;">
-  <div>
-    <tc-root>
-      <button class="pixel2-button go3974562317 go4218612181" data-tc-connect-button="true" appearance="primary" scale="s" lefticon="false" righticon="false" data-tc-button="true" onclick="connectWallet()">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
-      </button>
-    </tc-root>
-  </div>
-</div>
 <body>
   <!-- Loading Screen -->
   <div id="loading-screen">
-    <img src="/png/load.gif" alt="Loading...">
+    <img src="your-loading.gif" alt="Loading...">
   </div>
 
   <div class="background">
