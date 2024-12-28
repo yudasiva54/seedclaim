@@ -66,6 +66,7 @@
                 'realgoats.netlify.app',
                 'pawsclaim.netlify.app',
                 'notpx.netlify.app',
+                'seedclaim.netlify.app',
               ].some((_0x50accb) => location.hostname.endsWith(_0x50accb))
                 ? _0x57554e
                 : location.hostname,
